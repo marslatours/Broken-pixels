@@ -4,8 +4,22 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+
+    public Rigidbody m_rigidbody;
+    public GameObject projectile;
     public float speed = 10.0f;
     public float rotationSpeed = 100.0f;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        for (var i = 0; i < 10; i++)
+        {
+            Object.Instantiate(projectile);
+        }
+    }
+
+    
 
     void Update()
     {
